@@ -7,15 +7,17 @@ import messageRoutes from "./Routes/messageRoutes.js";
 import { notFound, errorHandler } from "./Middleware/errorMiddleware.js";
 import path from 'path'
 
+const cors = require('cors');
 dotenv.config();
 connectDB();
 const app = express();
 
 app.use(express.json());
-
+app.use(cors());
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
 app.use("/api/message", messageRoutes);
+
 
 //---------------------------Deployment------------------------------------------
 
