@@ -7,7 +7,7 @@ import messageRoutes from "./Routes/messageRoutes.js";
 import { notFound, errorHandler } from "./Middleware/errorMiddleware.js";
 import path from 'path'
 
-const cors = require('cors');
+import cors from "cors";
 dotenv.config();
 connectDB();
 const app = express();
