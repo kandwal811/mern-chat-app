@@ -14,9 +14,9 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use("/api/user", userRoutes);
-app.use("/api/chat", chatRoutes);
-app.use("/api/message", messageRoutes);
+app.use("https://chatly-9b08.onrender.com/api/user", userRoutes);
+app.use("https://chatly-9b08.onrender.com/api/chat", chatRoutes);
+app.use("https://chatly-9b08.onrender.com/api/message", messageRoutes);
 
 
 //---------------------------Deployment------------------------------------------
@@ -56,7 +56,9 @@ import { Server } from "socket.io";
 const io = new Server(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://chatly-sk.onrender.com
+
+",
   },
 });
 
