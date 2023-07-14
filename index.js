@@ -56,9 +56,7 @@ import { Server } from "socket.io";
 const io = new Server(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "https://chatly-sk.onrender.com
-
-",
+    origin: "https://chatly-sk.onrender.com",
   },
 });
 
