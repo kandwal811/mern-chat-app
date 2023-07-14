@@ -14,9 +14,9 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use("https://chatly-9b08.onrender.com/api/user", userRoutes);
-app.use("https://chatly-9b08.onrender.com/api/chat", chatRoutes);
-app.use("https://chatly-9b08.onrender.com/api/message", messageRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/chat", chatRoutes);
+app.use("/api/message", messageRoutes);
 
 
 //---------------------------Deployment------------------------------------------
